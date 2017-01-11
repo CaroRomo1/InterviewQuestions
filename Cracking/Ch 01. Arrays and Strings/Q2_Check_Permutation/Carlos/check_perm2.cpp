@@ -3,14 +3,7 @@
 
 using namespace std;
 
-//Metodo que devuelve el string ordenado
-string sortStr(string str)
-{
-    sort(str.begin(), str.end());
-    return str;
-}
-
-//Método compara los strings ordenados y define si es o no permutacion.
+//Método verifica que la cantidad de caracteres induviduales sean iguales en los dos strings
 bool checkPerm(string str1, string str2)
 {
     if(str1.length() != str2.length())
@@ -18,14 +11,27 @@ bool checkPerm(string str1, string str2)
         return false;
     }
 
-    if(sortStr(str1) == sortStr(str2))
+    int letras[128];
+    int valASCII;
+
+    for(int i=0; i < str1.length(); i++)
     {
-        return true;
+        valASCII = str1[i];
+        letras[valASCII]++;
     }
-    else
+
+    for(int i=0; i < str2.length(); i++)
     {
-        return false;
+        valASCII = str2[i];
+        letras[valASCII]--;
+
+        if(letras[valASCII] < 0)
+        {
+            return false;
+        }
     }
+
+    return true;
 }
 
 int main()
