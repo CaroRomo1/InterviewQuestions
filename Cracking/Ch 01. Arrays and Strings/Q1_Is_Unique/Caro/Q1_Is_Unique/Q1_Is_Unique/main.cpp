@@ -3,12 +3,13 @@
 //  Q1_Is_Unique
 //
 //  Created by Carolina Romo on 1/9/17.
-//  Copyright © 2017 ITESM. All rights reserved.
-//
 
-/* Chapter 1 - Q1 Is Unique:
- Implement an algorithm to determine if a string has all unique characters.
- What if you cannot use additional data structures? 
+/* 
+ * Cracking the coding interview edition 6
+ * Chapter 1 Question 1
+ * Is Unique:
+ * Implement an algorithm to determine if a string has all unique characters.
+ * What if you cannot use additional data structures?
  */
 
 #include <iostream>

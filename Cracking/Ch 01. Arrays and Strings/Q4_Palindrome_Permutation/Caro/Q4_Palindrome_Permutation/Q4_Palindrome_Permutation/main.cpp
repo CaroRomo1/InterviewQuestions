@@ -4,7 +4,10 @@
 //
 //  Created by Carolina Romo on 1/12/17.
 
-/* Palindrome Permutation: Given a string, write a function to check if it is a 
+/* 
+ * Cracking the coding interview edition 6
+ * Chapter 1 Question 4
+ * Palindrome Permutation: Given a string, write a function to check if it is a
  * permutation of a palindrome. A palindrome is a word or phrase that is the same 
  * forwards and backwards. A permutation is a rearrangement of letters. 
  * The palindrome does not need to be limited to just dictionary words.
@@ -12,8 +15,6 @@
  *          Input: Tact Coa
  *          Output: True (permutations:"taco cat'; "atco cta '; etc.)
  */
-
-
 
 #include <iostream>
 using namespace std;

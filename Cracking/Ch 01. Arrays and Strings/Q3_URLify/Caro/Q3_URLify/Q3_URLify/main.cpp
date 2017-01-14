@@ -1,22 +1,21 @@
+//  Created by Carolina Romo on 1/11/17.
+
 /*
- * Cracking the coding interview Edition 6
- * Problem 1.3 URLify --> Replace all the spaces in a string with '%20'.
+ * Cracking the coding interview edition 6
+ * Chapter 1 Question 3
+ * URLify: Replace all the spaces in a string with '%20'.
  * Assumption : We have enough space to accomodate addition chars
  * Preferebly in place
  */
 
-//  Created by Carolina Romo on 1/11/17.
-
+#include <iostream>
+using namespace std;
 
 /*
  * Function : urlify
  * Args     : string long enough to accomodate extra chars + true len
  * Return   : void (in place transformation of string)
  */
-
-#include <iostream>
-using namespace std;
-
 
 void urlify(char *str,int truelen ){
     int numberSpaces = 0, index = 0;

@@ -6,9 +6,12 @@
 //  Copyright © 2017 ITESM. All rights reserved.
 //
 
-/* Chapter 1 Question 2
- Check Permutation:
- Given two strings, write a method to decide if one is a permutation of the other. */
+/* 
+ * Cracking the coding interview edition 6
+ * Chapter 1 Question 2
+ * Check Permutation:
+ * Given two strings, write a method to decide if one is a permutation of the other. 
+ */
 
 #include <iostream>
 #include <algorithm>  // this header is required for std::sort to work
