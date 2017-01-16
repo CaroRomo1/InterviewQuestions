@@ -1,15 +1,13 @@
 #include <iostream>
-
 using namespace std;
 
-bool rotateMatrix(int matrix[4][4])
+bool rotateMatrix(int **matrix, int n)
 {
 	/*if (sizeof(matrix) == 0 || sizeof(matrix) != sizeof(matrix[0]))
 	{
 		return false;
 	}*/
 
-	int n = sizeof(matrix);
 	for (int layer = 0; layer < n/2; layer++)
 	{
 		int first = layer;
@@ -35,33 +33,51 @@ bool rotateMatrix(int matrix[4][4])
 		}
 	}
 
-	for (int i = 0; i < 4; i++)
+	return true;
+}
+
+void dispMatrix(int **matrix, int n)
+{
+	for (int i = 0; i < n; i++)
 	{
-		for (int j = 0; j < 4; j++)
+		for (int j = 0; j < n; j++)
 		{
 			cout << matrix[i][j] << "\t";
 		}
 		cout << endl;
 	}
-
-	return true;
 }
 
 int main()
 {
-	int matrix[4][4];
+	int n;
+
+	cout << "Size of matrix:" << endl;
+	cin >> n;
+
+	int **matrix = new int*[n];
+	for (int i = 0; i < n; i++)
+	{
+		matrix[i] = new int[n];
+	}
 
 	int cont = 1;
-	for (int i = 0; i < 4; i++)
+	for (int i = 0; i < n; i++)
 	{
-		for (int j = 0; j < 4; j++)
+		for (int j = 0; j < n; j++)
 		{
 			matrix[i][j] = cont;
 			cont++;
 		}
 	}
 
-	rotateMatrix(matrix);
+	cout << endl << "Original Matrix:" << endl;
+	dispMatrix(matrix, n);
+
+	rotateMatrix(matrix, n);
+
+	cout << endl << "90 degrees clockwise Matrix:" << endl;
+	dispMatrix(matrix, n);
 
 	system("pause");
 }
