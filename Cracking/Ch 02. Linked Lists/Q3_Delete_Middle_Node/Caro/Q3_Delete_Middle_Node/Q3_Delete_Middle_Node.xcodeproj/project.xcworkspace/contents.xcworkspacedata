@@ -2,6 +2,6 @@
 <Workspace
    version = "1.0">
    <FileRef
-      location = "self:Q2_Remove_Dups.xcodeproj">
+      location = "self:Q3_Delete_Middle_Node.xcodeproj">
    </FileRef>
 </Workspace>

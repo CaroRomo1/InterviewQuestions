@@ -1,8 +1,8 @@
 //
 //  main.cpp
-//  Q2_Remove_Dups
+//  Q3_Delete_Middle_Node
 //
-//  Created by Carolina Romo on 1/18/17.
+//  Created by Carolina Romo on 1/20/17.
 //  Copyright © 2017 CaroRomo. All rights reserved.
 //
 

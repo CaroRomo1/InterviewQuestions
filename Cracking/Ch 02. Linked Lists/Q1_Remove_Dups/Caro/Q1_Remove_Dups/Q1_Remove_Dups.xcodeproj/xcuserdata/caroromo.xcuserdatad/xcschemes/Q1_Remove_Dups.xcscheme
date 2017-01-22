@@ -14,10 +14,10 @@
             buildForAnalyzing = "YES">
             <BuildableReference
                BuildableIdentifier = "primary"
-               BlueprintIdentifier = "3F682B3A1E2FC4FF00083901"
-               BuildableName = "Q2_Remove_Dups"
-               BlueprintName = "Q2_Remove_Dups"
-               ReferencedContainer = "container:Q2_Remove_Dups.xcodeproj">
+               BlueprintIdentifier = "3F67A5A91E31451E00A795A7"
+               BuildableName = "Q1_Remove_Dups"
+               BlueprintName = "Q1_Remove_Dups"
+               ReferencedContainer = "container:Q1_Remove_Dups.xcodeproj">
             </BuildableReference>
          </BuildActionEntry>
       </BuildActionEntries>
@@ -32,10 +32,10 @@
       <MacroExpansion>
          <BuildableReference
             BuildableIdentifier = "primary"
-            BlueprintIdentifier = "3F682B3A1E2FC4FF00083901"
-            BuildableName = "Q2_Remove_Dups"
-            BlueprintName = "Q2_Remove_Dups"
-            ReferencedContainer = "container:Q2_Remove_Dups.xcodeproj">
+            BlueprintIdentifier = "3F67A5A91E31451E00A795A7"
+            BuildableName = "Q1_Remove_Dups"
+            BlueprintName = "Q1_Remove_Dups"
+            ReferencedContainer = "container:Q1_Remove_Dups.xcodeproj">
          </BuildableReference>
       </MacroExpansion>
       <AdditionalOptions>
@@ -55,10 +55,10 @@
          runnableDebuggingMode = "0">
          <BuildableReference
             BuildableIdentifier = "primary"
-            BlueprintIdentifier = "3F682B3A1E2FC4FF00083901"
-            BuildableName = "Q2_Remove_Dups"
-            BlueprintName = "Q2_Remove_Dups"
-            ReferencedContainer = "container:Q2_Remove_Dups.xcodeproj">
+            BlueprintIdentifier = "3F67A5A91E31451E00A795A7"
+            BuildableName = "Q1_Remove_Dups"
+            BlueprintName = "Q1_Remove_Dups"
+            ReferencedContainer = "container:Q1_Remove_Dups.xcodeproj">
          </BuildableReference>
       </BuildableProductRunnable>
       <AdditionalOptions>
@@ -74,10 +74,10 @@
          runnableDebuggingMode = "0">
          <BuildableReference
             BuildableIdentifier = "primary"
-            BlueprintIdentifier = "3F682B3A1E2FC4FF00083901"
-            BuildableName = "Q2_Remove_Dups"
-            BlueprintName = "Q2_Remove_Dups"
-            ReferencedContainer = "container:Q2_Remove_Dups.xcodeproj">
+            BlueprintIdentifier = "3F67A5A91E31451E00A795A7"
+            BuildableName = "Q1_Remove_Dups"
+            BlueprintName = "Q1_Remove_Dups"
+            ReferencedContainer = "container:Q1_Remove_Dups.xcodeproj">
          </BuildableReference>
       </BuildableProductRunnable>
    </ProfileAction>
