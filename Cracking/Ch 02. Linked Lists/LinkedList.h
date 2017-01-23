@@ -254,7 +254,7 @@ template <typename T>
 void LinkedList<T>::print(){
 	node<T> *aux = head;
 	while (aux != NULL){
-		cout << aux->getData()<< " ";
+		cout << aux->getData()<< "-->";
 		aux = aux->getNext();
 	}
 	cout << endl;
