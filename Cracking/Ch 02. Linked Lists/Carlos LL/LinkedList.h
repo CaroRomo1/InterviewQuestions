@@ -33,6 +33,7 @@ public:
 	void deleteDups();
 	node<T>* kthElement(int k);
 	node<T>* kthElement(node<T>* head, int k, int &i);
+	void partition(int x);
 
 private:
 	node<T> *head;
@@ -554,4 +555,56 @@ node<T>* LinkedList<T>::kthElement(node<T>* head, int k, int &i)
 	}
 
 	return nd;
+}
+
+template <typename T>
+void LinkedList<T>::partition(int x)
+{
+	node<T>* lowStart = NULL;
+	node<T>* lowEnd = NULL;
+	node<T>* highStart = NULL;
+	node<T>* highEnd = NULL;
+
+	while (head != NULL)
+	{
+		node<T>* next = head->getNext();
+		head->setNext(NULL);
+
+		if (x > head->getData())
+		{
+			if (lowStart == NULL)
+			{
+				lowStart = head;
+				lowEnd = lowStart;
+			}
+			else
+			{
+				lowEnd->setNext(head);
+				lowEnd = head;
+			}
+		}
+		else
+		{
+			if (highStart == NULL)
+			{
+				highStart = head;
+				highEnd = highStart;
+			}
+			else
+			{
+				highEnd->setNext(head);
+				highEnd = head;
+			}
+		}
+
+		head = next;
+	}
+
+	if (lowStart == NULL)
+	{
+		head = highStart;
+	}
+
+	lowEnd->setNext(highStart);
+	head = lowStart;
 }
