@@ -9,6 +9,8 @@
 
 
 /*
+ * Cracking the coding interview edition 6
+ * Chapter 2 Question 5
  * Sum Lists: 
  * You have two numbers represented by a linked list, where each node 
  * contains a single digit. The digits are stored in reverse order, 
@@ -29,8 +31,8 @@ using namespace std;
 /// Print list method, when getting node
 void printList(node<int> * head ) {
     while ( head ) {
-        cout << head->data << "-->";
-        head = head->next;
+        cout << head->getData() << "-->";
+        head = head->getNext();
     }
     cout << "NULL" << endl;
 }
@@ -45,7 +47,7 @@ node<int> * sumListIterative(node<int> *list1, node<int> *list2) {
     }
     
     // List3 will store result
-    LinkedList<int> list3;
+    node<int> *list3 = NULL;
     
     // For adding new nodes to tail of list3
     node<int> *list3Tail = NULL;
@@ -55,7 +57,7 @@ node<int> * sumListIterative(node<int> *list1, node<int> *list2) {
     // While at least one list has values
     while(list1 || list2) {
         // Add the values, if one of the list has already been traversed, add 0
-        value = carry + (list1 ? list1->data : 0) + (list2 ? list2->data : 0);
+        value = carry + (list1 ? list1->getData() : 0) + (list2 ? list2->getData() : 0);
         
         // Get the new value and carry
         if (value > 9) {
@@ -70,8 +72,8 @@ node<int> * sumListIterative(node<int> *list1, node<int> *list2) {
         node<int>  *temp = new node<int>(value);
         
         // If this is the first node, populate the result, else add to the tail
-        if (list3.isEmpty()) {
-            list3.addFirst(value);
+        if (list3 == NULL) {
+            list3 = temp;
         }
         else {
             list3Tail->setNext(temp);
@@ -81,18 +83,18 @@ node<int> * sumListIterative(node<int> *list1, node<int> *list2) {
         list3Tail = temp;
         
         if (list1) {
-            list1 = list1->next;
+            list1 = list1->getNext();
         }
         
         if (list2) {
-            list2 = list2->next;
+            list2 = list2->getNext();
         }
     }
     
     if (carry > 0) {
-        list3Tail->next = new node<int>(carry);
+        list3Tail->setNext(new node<int>(carry));
     }
-    return list3.head;
+    return list3;
 }
 
 
@@ -102,17 +104,17 @@ node<int> *sumListRecursive(node<int> * list1, node<int> * list2, int carry) {
     }
     int value = carry;
     if (list1) {
-        value += list1->data;
+        value += list1->getData();
     }
     if (list2) {
-        value += list2->data;
+        value += list2->getData();
     }
     
     node<int> * resultNode = new node<int>(value % 10 );
     
-    resultNode->next = sumListRecursive(list1 ? (list1->next) : NULL,
-                                     list2 ? (list2->next) : NULL,
-                                     value > 9 ? 1 : 0 );
+    resultNode->setNext(sumListRecursive(list1 ? (list1->getNext()) : NULL,
+                                     list2 ? (list2->getNext()) : NULL,
+                                     value > 9 ? 1 : 0 ));
     return resultNode;
 }
 
@@ -123,7 +125,7 @@ node<int> *sumListRecursive(node<int> * list1, node<int> * list2, int carry) {
  *      Input: (6 -> 1 -> 7) + (2 -> 9 -> 5).
  *      That is, 617 + 295.
  *      Output:9 -> 1 -> 2. That is,912.
- */
+ * /
 
 void padList(node<int> * &list, int padding) {
     for (int i = 0; i < padding; ++i ) {
@@ -175,21 +177,21 @@ node<int>  *addMethod2(node<int>  *list1,node<int>  * list2 ) {
     }
     return list3;
 }
-
+*/
 int main() {
     // List 1 for number 617
     LinkedList<int> list1;
-    list1.addLast(6);
-    list1.addLast(1);
     list1.addLast(7);
+    list1.addLast(1);
+    list1.addLast(6);
     cout << "List 1:  ";
     list1.print();
     
     // List2 for number 295
     LinkedList<int> list2;
-    list2.addLast(2);
-    list2.addLast(9);
     list2.addLast(5);
+    list2.addLast(9);
+    list2.addLast(2);
     cout << "List 2:  ";
     list2.print();
     
@@ -203,7 +205,8 @@ int main() {
     cout << "List 4:  ";
     printList(&list4);
     
-
+    // Luego acabo :(
+    /*
     cout << "Follow up case" << endl;
     cout << "List 1:  ";
     list1.print();
@@ -215,7 +218,7 @@ int main() {
     cout << "Adding two above lists\n";
     cout << "List3:  ";
     printList(&list3);
-
+    */
     return 0;
 }
 
