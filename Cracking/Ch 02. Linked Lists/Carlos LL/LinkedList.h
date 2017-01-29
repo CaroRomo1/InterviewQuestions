@@ -34,6 +34,7 @@ public:
 	node<T>* kthElement(int k);
 	node<T>* kthElement(node<T>* head, int k, int &i);
 	void partition(int x);
+	bool deleteMiddle();
 
 private:
 	node<T> *head;
@@ -607,4 +608,24 @@ void LinkedList<T>::partition(int x)
 
 	lowEnd->setNext(highStart);
 	head = lowStart;
+}
+
+template <typename T>
+bool LinkedList<T>::deleteMiddle()
+{
+	node<T>* mid = head;
+	for (int i = 1; i < iC / 2; i++)
+	{
+		mid = mid->getNext();
+	}
+
+	if (mid == NULL || mid->getNext() == NULL)
+	{
+		return false;
+	}
+	node<T>* aux = mid->getNext();
+	mid->setData(aux->getData());
+	mid->setNext(aux->getNext());
+	delete aux;
+	return true;
 }

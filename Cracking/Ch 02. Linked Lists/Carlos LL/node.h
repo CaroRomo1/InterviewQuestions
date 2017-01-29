@@ -18,7 +18,7 @@ template <typename T>
 node<T>::node(T data)
 {
 	this->data = data;
-	this->next = null;
+	this->next = NULL;
 }
 
 template <typename T>
