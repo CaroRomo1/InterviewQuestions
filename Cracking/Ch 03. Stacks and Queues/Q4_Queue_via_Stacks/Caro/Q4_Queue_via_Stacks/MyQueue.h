@@ -19,7 +19,7 @@ class MyQueue{
 private:
     void shiftStacks();
 public:
-    stack<int> stackNew, stackOld;
+    stack<T> stackNew, stackOld;
     MyQueue();
     int size();
     void add(T value);
