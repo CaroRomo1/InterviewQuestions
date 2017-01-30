@@ -1,0 +1,38 @@
+
+#include <vector>
+#include <iostream>
+#include <string>
+#include <cstring>
+
+using namespace std;
+
+bool isUniqe(string str){
+  char arr[1024];
+  int count[256]={0};
+  bool uniqe=true;
+  strcpy(arr, str.c_str());
+    for(int i=0;i<int(strlen(arr));i++) {
+      count[(int)(arr[i])]++;
+      if(count[(int)(arr[i])]>1){       
+        uniqe=false;
+        break;
+      }
+    }
+  
+  return uniqe;
+}
+
+int main () {
+    string a;
+    
+    a = "ada";
+    
+    
+   if(isUniqe(a))
+      cout << "The string has no repeatations." <<endl;
+    else
+      cout << "The characters in the string are not unique." <<endl;
+
+
+    return 0;
+}
