@@ -15,19 +15,25 @@
 
 #include <iostream>
 #include <stack>
+#include "MyQueue.h"
 
 using namespace std;
 
-class MyQueue{
-    private:
-        stack<int> stackNew, stackOld;
-    public:
-        MyQueue();
-    
-};
-
-
 int main() {
+    MyQueue<int> q;
+    
+    q.add(2);
+    q.add(3);
+    cout << q.peek() << endl;
+    q.remove();
+    
+    q.add(4);
+    q.add(5);
+    cout << q.peek() << endl;
+    q.remove();
+    q.remove();
+    cout << q.peek() << endl;
+    
     
     
     return 0;
