@@ -3,7 +3,8 @@ class LinkedList
 {
 public:
 	LinkedList();
-	~LinkedList();
+	//~LinkedList();
+	int getiC();
 	void addFirst(T data);
 	void addLast(T data);
 	bool add(T data, int pos);
@@ -26,15 +27,22 @@ public:
 	bool operator==(LinkedList<T> lista);
 	void operator+=(T dato);
 	void operator+=(LinkedList<T> lista);
-	LinkedList(const LinkedList<T>& lista);
+	//LinkedList(const LinkedList<T>& lista);
 	void operator=(LinkedList<T> lista);
 
+	//Interview Preparation
 	bool isPalindrome();
 	void deleteDups();
 	node<T>* kthElement(int k);
 	node<T>* kthElement(node<T>* head, int k, int &i);
 	void partition(int x);
 	bool deleteMiddle();
+	//sumList Start
+	void sumedList1(node<T>* l1, node<T>* l2, int carrie);
+	void sumedList2(LinkedList<T> l1, LinkedList<T> l2);
+	int addList2(node<T>* l1, node<T>* l2);
+	void padLeft(int num);
+
 
 private:
 	node<T> *head;
@@ -49,10 +57,16 @@ LinkedList<T>::LinkedList()
 	iC = 0;
 }
 
+//template <typename T>
+//LinkedList<T>::~LinkedList()
+//{
+//	borra();
+//}
+
 template <typename T>
-LinkedList<T>::~LinkedList()
+int LinkedList<T>::getiC()
 {
-	borra();
+	return this->iC;
 }
 
 
@@ -443,18 +457,18 @@ void LinkedList<T>::operator+=(LinkedList<T> lista) //Por alguna razon copia el 
 	}
 }
 
-template <typename T>
-LinkedList<T>::LinkedList(const LinkedList<T>& lista)
-{
-	iC = lista.iC;
-	node<T>* aux = head;
-	node<T>* aux2 = lista.head;
-	for (int i = 1; i <= iC; i++)
-	{
-		aux->setNext(new node<T>(aux2->getData()));
-		aux2 = aux2->getNext();
-	}
-}
+//template <typename T>
+//LinkedList<T>::LinkedList(const LinkedList<T>& lista)
+//{
+//	iC = lista.iC;
+//	node<T>* aux = head;
+//	node<T>* aux2 = lista.head;
+//	for (int i = 1; i <= iC; i++)
+//	{
+//		aux->setNext(new node<T>(aux2->getData()));
+//		aux2 = aux2->getNext();
+//	}
+//}
 
 template <typename T>
 void LinkedList<T>::operator=(LinkedList<T> lista)
@@ -628,4 +642,96 @@ bool LinkedList<T>::deleteMiddle()
 	mid->setNext(aux->getNext());
 	delete aux;
 	return true;
+}
+
+template <typename T>
+void LinkedList<T>::sumedList1(node<T>* l1, node<T>* l2, int carrie)
+{
+	if (l1 == NULL && l2 == NULL && carrie == 0)
+	{
+	}
+
+	else
+	{
+		int value = carrie;
+		if (l1 != NULL)
+		{
+			value += l1->getData();
+		}
+
+		if (l2 != NULL)
+		{
+			value += l2->getData();
+		}
+
+		addLast(value % 10);
+
+		if (l1 != NULL || l2 != NULL)
+		{
+			sumedList1(
+				l1 == NULL ? NULL : l1->getNext(),
+				l2 == NULL ? NULL : l2->getNext(),
+				value >= 10 ? 1 : 0);
+		}
+	}
+}
+
+template <typename T>
+void LinkedList<T>::padLeft(int num)
+{
+	for (int i = 0; i < num; i++)
+	{
+		addFirst(0);
+	}
+}
+
+
+template <typename T>
+int LinkedList<T>::addList2(node<T>* l1, node<T>* l2)
+{
+	if (l1 == NULL && l2 == NULL)
+	{
+		return 0;
+	}
+	else
+	{
+		int carrie = addList2(l1->getNext(), l2->getNext());
+
+		int value = l1->getData() + l2->getData() + carrie;
+
+		addFirst(value % 10);
+
+		if (value >= 10)
+		{
+			return 1;
+		}
+		else
+		{
+			return 0;
+		}
+
+	}
+}
+
+template <typename T>
+void LinkedList<T>::sumedList2(LinkedList<T> l1, LinkedList<T> l2)
+{
+	int len1 = l1.getiC();
+	int len2 = l2.getiC();
+
+	if (len1 < len2)
+	{
+		l1.padLeft(len2 - len1);
+	}
+	else
+	{
+		l2.padLeft(len1 - len2);
+	}
+
+	int carrie = addList2(l1.getHead(), l2.getHead());
+
+	if (carrie != 0)
+	{
+		addFirst(1);
+	}
 }
