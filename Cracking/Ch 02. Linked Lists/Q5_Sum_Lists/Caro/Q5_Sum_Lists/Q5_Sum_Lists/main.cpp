@@ -30,11 +30,17 @@ using namespace std;
 
 /// Print list method, when getting node
 void printList(node<int> * head ) {
-    while ( head ) {
+    while (head) {
         cout << head->getData() << "-->";
         head = head->getNext();
     }
     cout << "NULL" << endl;
+}
+
+void insert(node<int> * &h, int data ) {
+    node<int> * newNode = new node<int>(data);
+    newNode->next = h;
+    h = newNode;
 }
 
 
@@ -125,7 +131,7 @@ node<int> *sumListRecursive(node<int> * list1, node<int> * list2, int carry) {
  *      Input: (6 -> 1 -> 7) + (2 -> 9 -> 5).
  *      That is, 617 + 295.
  *      Output:9 -> 1 -> 2. That is,912.
- * /
+ */
 
 void padList(node<int> * &list, int padding) {
     for (int i = 0; i < padding; ++i ) {
@@ -138,23 +144,24 @@ int length(node<int> * head ) {
     int len = 0;
     while( head ) {
         len++;
-        head = head->next;
+        head = head->getNext();
     }
     return len;
 }
 
 node<int> *sumHelper(node<int> * list1, node<int> * list2, int &carry) {
     if (list1 == NULL && list2 == NULL && carry == 0) {
-        return nullptr;
+        return NULL;
     }
     
-    node<int> * result = sumHelper(list1 ? (list1->next) : nullptr,
-                                        list2 ? (list2->next) : nullptr,
+    node<int> * result = sumHelper(list1 ? (list1->getNext()) : NULL,
+                                        list2 ? (list2->getNext()) : NULL,
                                         carry);
     
-    int value = carry + (list1 ? list1->data : 0 ) + (list2 ? list2->data : 0);
-    node<int> * resultNode = new node<int>(value % 10 );
-    result->setNext(resultNode);
+    int value = carry + (list1 ? list1->getData() : 0 ) + (list2 ? list2->getData() : 0);
+    //node<int> * resultNode = new node<int>(value % 10 );
+    insert(result, value);
+    
     carry = (value > 9 ) ? 1 : 0;
     return result;
 }
@@ -177,7 +184,7 @@ node<int>  *addMethod2(node<int>  *list1,node<int>  * list2 ) {
     }
     return list3;
 }
-*/
+
 int main() {
     // List 1 for number 617
     LinkedList<int> list1;
@@ -204,9 +211,7 @@ int main() {
     cout << "Recursive Solution: " << endl;
     cout << "List 4:  ";
     printList(&list4);
-    
-    // Luego acabo :(
-    /*
+
     cout << "Follow up case" << endl;
     cout << "List 1:  ";
     list1.print();
@@ -218,7 +223,7 @@ int main() {
     cout << "Adding two above lists\n";
     cout << "List3:  ";
     printList(&list3);
-    */
+    
     return 0;
 }
 
