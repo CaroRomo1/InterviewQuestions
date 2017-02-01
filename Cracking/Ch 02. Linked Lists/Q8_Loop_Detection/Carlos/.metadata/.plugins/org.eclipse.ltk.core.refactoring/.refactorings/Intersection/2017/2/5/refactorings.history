@@ -1,0 +1,4 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<session version="1.0">
+<refactoring comment="Rename resource &apos;Intersection/Source/Intersection&apos; to &apos;Intersection.cpp&apos;" description="Rename resource &apos;Intersection&apos;" flags="7" id="org.eclipse.ltk.core.refactoring.rename.resource" input="Source/Intersection" name="Intersection.cpp" stamp="1485915500573" updateReferences="true"/>
+</session>

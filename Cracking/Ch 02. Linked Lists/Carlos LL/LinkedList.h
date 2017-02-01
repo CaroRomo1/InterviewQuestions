@@ -1,8 +1,12 @@
+#include <stack>
+#include <map>
+
 template <class T>
 class LinkedList
 {
 public:
 	LinkedList();
+	LinkedList(node<T>* n);
 	//~LinkedList();
 	int getiC();
 	void addFirst(T data);
@@ -33,8 +37,8 @@ public:
 	//Interview Preparation
 	bool isPalindrome();
 	void deleteDups();
-	node<T>* kthElement(int k);
-	node<T>* kthElement(node<T>* head, int k, int &i);
+	node<T>* kthLastElement(int k);
+	node<T>* kthLastElement(node<T>* head, int k, int &i);
 	void partition(int x);
 	bool deleteMiddle();
 	//sumList Start
@@ -42,7 +46,9 @@ public:
 	void sumedList2(LinkedList<T> l1, LinkedList<T> l2);
 	int addList2(node<T>* l1, node<T>* l2);
 	void padLeft(int num);
-
+	//sumList End
+	node<T>* getKthElement(int k);
+	node<T>* getTail();
 
 private:
 	node<T> *head;
@@ -55,6 +61,19 @@ LinkedList<T>::LinkedList()
 {
 	head = NULL;
 	iC = 0;
+}
+
+template <typename T>
+LinkedList<T>::LinkedList(node<T>* n)
+{
+	this->head = n;
+	this->iC = 0;
+
+	while (n != NULL)
+	{
+		n = n->getNext();
+		iC++;
+	}
 }
 
 //template <typename T>
@@ -209,6 +228,7 @@ void LinkedList<T>::borra()
 		delete aux;
 		aux = head;
 	}
+	this->iC = 0;
 }
 
 template <typename T>
@@ -471,15 +491,15 @@ void LinkedList<T>::operator+=(LinkedList<T> lista) //Por alguna razon copia el 
 //}
 
 template <typename T>
-void LinkedList<T>::operator=(LinkedList<T> lista)
-{
-	iC = lista.iC;
-	node<T>* aux = head;
-	node<T>* aux2 = lista.head;
-	for (int i = 1; i <= iC; i++)
-	{
-		aux->setNext(new node<T>(aux2->getData()));
-		aux2 = aux2->getNext();
+void LinkedList<T>::operator=(LinkedList<T> lista) {
+	this->borra();
+	node<T> *aux;
+	T d;
+	aux = lista.head;
+	while (aux != NULL) {
+		d = aux->getData();
+		this->addLast(d);
+		aux = aux->getNext();
 	}
 }
 
@@ -548,20 +568,20 @@ void LinkedList<T>::deleteDups()
 }
 
 template <typename T>
-node<T>* LinkedList<T>::kthElement(int k)
+node<T>* LinkedList<T>::kthLastElement(int k)
 {
 	int i = 0;
-	return kthElement(head, k, i);
+	return kthLastElement(head, k, i);
 }
 
 template <typename T>
-node<T>* LinkedList<T>::kthElement(node<T>* head, int k, int &i)
+node<T>* LinkedList<T>::kthLastElement(node<T>* head, int k, int &i)
 {
 	if (head == NULL)
 	{
 		return NULL;
 	}
-	node<T>* nd = kthElement(head->getNext(), k, i);
+	node<T>* nd = kthLastElement(head->getNext(), k, i);
 
 	i++;
 	if (i == k)
@@ -734,4 +754,37 @@ void LinkedList<T>::sumedList2(LinkedList<T> l1, LinkedList<T> l2)
 	{
 		addFirst(1);
 	}
+}
+
+template <typename T>
+node<T>* LinkedList<T>::getKthElement(int k)
+{
+	node<T>* n = head;
+
+	while (n != NULL && k > 0)
+	{
+		n = n->getNext();
+		k--;
+	}
+
+	return n;
+}
+
+template <typename T>
+node<T>* LinkedList<T>::getTail()
+{
+	if (head == NULL)
+	{
+		return NULL;
+	}
+	int size = 1;
+
+	node<T>* current = head;
+
+	while (current != NULL)
+	{
+		current = current->getNext();
+		size++;
+	}
+	return current;
 }
