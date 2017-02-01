@@ -11,34 +11,83 @@
 
 using namespace std;
 
-template <typename T>
+template <class T>
 class FixedMultiStack {
 private:
-    int numberOfStacks 3;
+    int numOfStack = 3;
     int stackCapacity;
-    int[] values;
-    int[] sizes;
+    int *stackArray;
+    int *stackCapacityUsed;
 public:
+    //Create 3 stacks, each stack is of size stackCapacity.
     FixedMultiStack(int stackSize);
+    //Push an element onto stack stackNum, where stackNum is from 0 to 2.
     void push(T stackNum, T value);
-    T pop(T stackNum);
-    T peek(T stackNum);
+    //Pop the top element from stack stackNum, where stackNum is from 0 to 2.
+    void pop(T stackNum);
+    //Return the top element on stack stackNum, where stackNum is from 0 to 2.
+    T top(T stackNum);
     bool isEmpty(T stackNum);
     bool isFull(T stackNum);
+    //Return the top index of stack stackNum, where stackNum is from 0 to 2.
     int indexOfTop(T stackNum);
 };
 
-template <T>
+template <typename T>
 FixedMultiStack<T>::FixedMultiStack(int stackSize){
     stackCapacity = stackSize;
-    values = new int[stackSize * numberOfStacks];
-    sizes = new int[numberOfStacks];
+    stackArray = new int[numOfStack * stackCapacity]();
+    stackCapacityUsed = new int[numOfStack]();
 }
 
-template <T>
-void FixedMultiStack<T>::push(int stackNum, int value) throws FullStackException {
-    /* Check that we have space for the next element */ i f (iSFull(stackNum) {
-        throw new FullStackException();
+template <typename T>
+void FixedMultiStack<T>::push(T stackNum, T value) {
+    if(isFull(stackNum))
+        cout << "Stack " << stackNum << " is full" << endl;
+    else {
+        stackCapacityUsed[stackNum]++;
+        stackArray[indexOfTop(stackNum)] = value;
+    }
+}
+
+template <typename T>
+void FixedMultiStack<T>::pop(T stackNum) {
+    if(isEmpty(stackNum))
+        cout << "Stack " << stackNum << " is empty" << endl;
+    else {
+        int topIndex = indexOfTop(stackNum);
+        stackArray[topIndex] = 0;
+        stackCapacityUsed[stackNum]--;
+    }
+}
+
+template <typename T>
+T FixedMultiStack<T>::top(T stackNum){
+    if(isEmpty(stackNum)) {
+        cout << "Stack " << stackNum << " is empty" << endl;
+        exit(1); //Or throw an exception.
+    }
+    else {
+        return stackArray[indexOfTop(stackNum)];
+    }
+}
+
+template <typename T>
+bool FixedMultiStack<T>::isEmpty(T stackNum){
+    return (stackCapacityUsed[stackNum] == 0);
+}
+
+template <typename T>
+bool FixedMultiStack<T>::isFull(T stackNum){
+    return (stackCapacityUsed[stackNum] == stackCapacity);
+}
+
+template <typename T>
+int FixedMultiStack<T>::indexOfTop(T stackNum){
+    int startIndex = stackNum * stackCapacity;
+    int capacity = stackCapacityUsed[stackNum];
+    return (startIndex + capacity - 1);
+}
 
 
 #endif /* FixedMultiStack_h */
