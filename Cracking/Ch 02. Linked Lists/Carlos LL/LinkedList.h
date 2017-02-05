@@ -761,7 +761,7 @@ node<T>* LinkedList<T>::getKthElement(int k)
 {
 	node<T>* n = head;
 
-	while (n != NULL && k > 0)
+	while (n != NULL && k > 1)
 	{
 		n = n->getNext();
 		k--;
@@ -781,7 +781,7 @@ node<T>* LinkedList<T>::getTail()
 
 	node<T>* current = head;
 
-	while (current != NULL)
+	while (current->getNext() != NULL)
 	{
 		current = current->getNext();
 		size++;

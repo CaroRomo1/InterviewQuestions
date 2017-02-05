@@ -1,4 +1,0 @@
-<?xml version="1.0" encoding="UTF-8"?>
-<session version="1.0">
-<refactoring comment="Rename resource &apos;loopDetection/Source/loopDet&apos; to &apos;loopDet.cpp&apos;" description="Rename resource &apos;loopDet&apos;" flags="7" id="org.eclipse.ltk.core.refactoring.rename.resource" input="Source/loopDet" name="loopDet.cpp" stamp="1485914703684" updateReferences="true"/>
-</session>
