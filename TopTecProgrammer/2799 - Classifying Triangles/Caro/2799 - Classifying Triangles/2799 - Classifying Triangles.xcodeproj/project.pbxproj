@@ -7,11 +7,11 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		3F2406DD1E4AB5B000C7C3D6 /* main.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 3F2406DC1E4AB5B000C7C3D6 /* main.cpp */; };
+		3F2407161E4AC60E00C7C3D6 /* main.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 3F2407151E4AC60E00C7C3D6 /* main.cpp */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXCopyFilesBuildPhase section */
-		3F2406D71E4AB5B000C7C3D6 /* CopyFiles */ = {
+		3F2407101E4AC60E00C7C3D6 /* CopyFiles */ = {
 			isa = PBXCopyFilesBuildPhase;
 			buildActionMask = 2147483647;
 			dstPath = /usr/share/man/man1/;
@@ -23,12 +23,12 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
-		3F2406D91E4AB5B000C7C3D6 /* 2409 - Find the Heterochromatic Index */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = "2409 - Find the Heterochromatic Index"; sourceTree = BUILT_PRODUCTS_DIR; };
-		3F2406DC1E4AB5B000C7C3D6 /* main.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = main.cpp; sourceTree = "<group>"; };
+		3F2407121E4AC60E00C7C3D6 /* 2799 - Classifying Triangles */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = "2799 - Classifying Triangles"; sourceTree = BUILT_PRODUCTS_DIR; };
+		3F2407151E4AC60E00C7C3D6 /* main.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = main.cpp; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
-		3F2406D61E4AB5B000C7C3D6 /* Frameworks */ = {
+		3F24070F1E4AC60E00C7C3D6 /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -38,95 +38,95 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
-		3F2406D01E4AB5B000C7C3D6 = {
+		3F2407091E4AC60E00C7C3D6 = {
 			isa = PBXGroup;
 			children = (
-				3F2406DB1E4AB5B000C7C3D6 /* 2409 - Find the Heterochromatic Index */,
-				3F2406DA1E4AB5B000C7C3D6 /* Products */,
+				3F2407141E4AC60E00C7C3D6 /* 2799 - Classifying Triangles */,
+				3F2407131E4AC60E00C7C3D6 /* Products */,
 			);
 			sourceTree = "<group>";
 		};
-		3F2406DA1E4AB5B000C7C3D6 /* Products */ = {
+		3F2407131E4AC60E00C7C3D6 /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				3F2406D91E4AB5B000C7C3D6 /* 2409 - Find the Heterochromatic Index */,
+				3F2407121E4AC60E00C7C3D6 /* 2799 - Classifying Triangles */,
 			);
 			name = Products;
 			sourceTree = "<group>";
 		};
-		3F2406DB1E4AB5B000C7C3D6 /* 2409 - Find the Heterochromatic Index */ = {
+		3F2407141E4AC60E00C7C3D6 /* 2799 - Classifying Triangles */ = {
 			isa = PBXGroup;
 			children = (
-				3F2406DC1E4AB5B000C7C3D6 /* main.cpp */,
+				3F2407151E4AC60E00C7C3D6 /* main.cpp */,
 			);
-			path = "2409 - Find the Heterochromatic Index";
+			path = "2799 - Classifying Triangles";
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
-		3F2406D81E4AB5B000C7C3D6 /* 2409 - Find the Heterochromatic Index */ = {
+		3F2407111E4AC60E00C7C3D6 /* 2799 - Classifying Triangles */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 3F2406E01E4AB5B000C7C3D6 /* Build configuration list for PBXNativeTarget "2409 - Find the Heterochromatic Index" */;
+			buildConfigurationList = 3F2407191E4AC60E00C7C3D6 /* Build configuration list for PBXNativeTarget "2799 - Classifying Triangles" */;
 			buildPhases = (
-				3F2406D51E4AB5B000C7C3D6 /* Sources */,
-				3F2406D61E4AB5B000C7C3D6 /* Frameworks */,
-				3F2406D71E4AB5B000C7C3D6 /* CopyFiles */,
+				3F24070E1E4AC60E00C7C3D6 /* Sources */,
+				3F24070F1E4AC60E00C7C3D6 /* Frameworks */,
+				3F2407101E4AC60E00C7C3D6 /* CopyFiles */,
 			);
 			buildRules = (
 			);
 			dependencies = (
 			);
-			name = "2409 - Find the Heterochromatic Index";
-			productName = "2409 - Find the Heterochromatic Index";
-			productReference = 3F2406D91E4AB5B000C7C3D6 /* 2409 - Find the Heterochromatic Index */;
+			name = "2799 - Classifying Triangles";
+			productName = "2799 - Classifying Triangles";
+			productReference = 3F2407121E4AC60E00C7C3D6 /* 2799 - Classifying Triangles */;
 			productType = "com.apple.product-type.tool";
 		};
 /* End PBXNativeTarget section */
 
 /* Begin PBXProject section */
-		3F2406D11E4AB5B000C7C3D6 /* Project object */ = {
+		3F24070A1E4AC60E00C7C3D6 /* Project object */ = {
 			isa = PBXProject;
 			attributes = {
 				LastUpgradeCheck = 0820;
 				ORGANIZATIONNAME = CaroRomo;
 				TargetAttributes = {
-					3F2406D81E4AB5B000C7C3D6 = {
+					3F2407111E4AC60E00C7C3D6 = {
 						CreatedOnToolsVersion = 8.2.1;
 						ProvisioningStyle = Automatic;
 					};
 				};
 			};
-			buildConfigurationList = 3F2406D41E4AB5B000C7C3D6 /* Build configuration list for PBXProject "2409 - Find the Heterochromatic Index" */;
+			buildConfigurationList = 3F24070D1E4AC60E00C7C3D6 /* Build configuration list for PBXProject "2799 - Classifying Triangles" */;
 			compatibilityVersion = "Xcode 3.2";
 			developmentRegion = English;
 			hasScannedForEncodings = 0;
 			knownRegions = (
 				en,
 			);
-			mainGroup = 3F2406D01E4AB5B000C7C3D6;
-			productRefGroup = 3F2406DA1E4AB5B000C7C3D6 /* Products */;
+			mainGroup = 3F2407091E4AC60E00C7C3D6;
+			productRefGroup = 3F2407131E4AC60E00C7C3D6 /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
-				3F2406D81E4AB5B000C7C3D6 /* 2409 - Find the Heterochromatic Index */,
+				3F2407111E4AC60E00C7C3D6 /* 2799 - Classifying Triangles */,
 			);
 		};
 /* End PBXProject section */
 
 /* Begin PBXSourcesBuildPhase section */
-		3F2406D51E4AB5B000C7C3D6 /* Sources */ = {
+		3F24070E1E4AC60E00C7C3D6 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				3F2406DD1E4AB5B000C7C3D6 /* main.cpp in Sources */,
+				3F2407161E4AC60E00C7C3D6 /* main.cpp in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXSourcesBuildPhase section */
 
 /* Begin XCBuildConfiguration section */
-		3F2406DE1E4AB5B000C7C3D6 /* Debug */ = {
+		3F2407171E4AC60E00C7C3D6 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
@@ -173,7 +173,7 @@
 			};
 			name = Debug;
 		};
-		3F2406DF1E4AB5B000C7C3D6 /* Release */ = {
+		3F2407181E4AC60E00C7C3D6 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
@@ -213,14 +213,14 @@
 			};
 			name = Release;
 		};
-		3F2406E11E4AB5B000C7C3D6 /* Debug */ = {
+		3F24071A1E4AC60E00C7C3D6 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				PRODUCT_NAME = "$(TARGET_NAME)";
 			};
 			name = Debug;
 		};
-		3F2406E21E4AB5B000C7C3D6 /* Release */ = {
+		3F24071B1E4AC60E00C7C3D6 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -230,24 +230,24 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
-		3F2406D41E4AB5B000C7C3D6 /* Build configuration list for PBXProject "2409 - Find the Heterochromatic Index" */ = {
+		3F24070D1E4AC60E00C7C3D6 /* Build configuration list for PBXProject "2799 - Classifying Triangles" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				3F2406DE1E4AB5B000C7C3D6 /* Debug */,
-				3F2406DF1E4AB5B000C7C3D6 /* Release */,
+				3F2407171E4AC60E00C7C3D6 /* Debug */,
+				3F2407181E4AC60E00C7C3D6 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		3F2406E01E4AB5B000C7C3D6 /* Build configuration list for PBXNativeTarget "2409 - Find the Heterochromatic Index" */ = {
+		3F2407191E4AC60E00C7C3D6 /* Build configuration list for PBXNativeTarget "2799 - Classifying Triangles" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				3F2406E11E4AB5B000C7C3D6 /* Debug */,
-				3F2406E21E4AB5B000C7C3D6 /* Release */,
+				3F24071A1E4AC60E00C7C3D6 /* Debug */,
+				3F24071B1E4AC60E00C7C3D6 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 		};
 /* End XCConfigurationList section */
 	};
-	rootObject = 3F2406D11E4AB5B000C7C3D6 /* Project object */;
+	rootObject = 3F24070A1E4AC60E00C7C3D6 /* Project object */;
 }

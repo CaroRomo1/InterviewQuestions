@@ -14,10 +14,10 @@
             buildForAnalyzing = "YES">
             <BuildableReference
                BuildableIdentifier = "primary"
-               BlueprintIdentifier = "3F2406D81E4AB5B000C7C3D6"
-               BuildableName = "2409 - Find the Heterochromatic Index"
-               BlueprintName = "2409 - Find the Heterochromatic Index"
-               ReferencedContainer = "container:2409 - Find the Heterochromatic Index.xcodeproj">
+               BlueprintIdentifier = "3F2407111E4AC60E00C7C3D6"
+               BuildableName = "2799 - Classifying Triangles"
+               BlueprintName = "2799 - Classifying Triangles"
+               ReferencedContainer = "container:2799 - Classifying Triangles.xcodeproj">
             </BuildableReference>
          </BuildActionEntry>
       </BuildActionEntries>
@@ -32,10 +32,10 @@
       <MacroExpansion>
          <BuildableReference
             BuildableIdentifier = "primary"
-            BlueprintIdentifier = "3F2406D81E4AB5B000C7C3D6"
-            BuildableName = "2409 - Find the Heterochromatic Index"
-            BlueprintName = "2409 - Find the Heterochromatic Index"
-            ReferencedContainer = "container:2409 - Find the Heterochromatic Index.xcodeproj">
+            BlueprintIdentifier = "3F2407111E4AC60E00C7C3D6"
+            BuildableName = "2799 - Classifying Triangles"
+            BlueprintName = "2799 - Classifying Triangles"
+            ReferencedContainer = "container:2799 - Classifying Triangles.xcodeproj">
          </BuildableReference>
       </MacroExpansion>
       <AdditionalOptions>
@@ -55,10 +55,10 @@
          runnableDebuggingMode = "0">
          <BuildableReference
             BuildableIdentifier = "primary"
-            BlueprintIdentifier = "3F2406D81E4AB5B000C7C3D6"
-            BuildableName = "2409 - Find the Heterochromatic Index"
-            BlueprintName = "2409 - Find the Heterochromatic Index"
-            ReferencedContainer = "container:2409 - Find the Heterochromatic Index.xcodeproj">
+            BlueprintIdentifier = "3F2407111E4AC60E00C7C3D6"
+            BuildableName = "2799 - Classifying Triangles"
+            BlueprintName = "2799 - Classifying Triangles"
+            ReferencedContainer = "container:2799 - Classifying Triangles.xcodeproj">
          </BuildableReference>
       </BuildableProductRunnable>
       <AdditionalOptions>
@@ -74,10 +74,10 @@
          runnableDebuggingMode = "0">
          <BuildableReference
             BuildableIdentifier = "primary"
-            BlueprintIdentifier = "3F2406D81E4AB5B000C7C3D6"
-            BuildableName = "2409 - Find the Heterochromatic Index"
-            BlueprintName = "2409 - Find the Heterochromatic Index"
-            ReferencedContainer = "container:2409 - Find the Heterochromatic Index.xcodeproj">
+            BlueprintIdentifier = "3F2407111E4AC60E00C7C3D6"
+            BuildableName = "2799 - Classifying Triangles"
+            BlueprintName = "2799 - Classifying Triangles"
+            ReferencedContainer = "container:2799 - Classifying Triangles.xcodeproj">
          </BuildableReference>
       </BuildableProductRunnable>
    </ProfileAction>
