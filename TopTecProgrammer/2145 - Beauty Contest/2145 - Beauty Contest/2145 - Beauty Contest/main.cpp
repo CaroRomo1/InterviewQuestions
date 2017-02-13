@@ -8,8 +8,46 @@
 
 #include <iostream>
 
-int main(int argc, const char * argv[]) {
-    // insert code here...
-    std::cout << "Hello, World!\n";
+using namespace std;
+
+
+int main() {
+    
+    int n = 0, c = 1;
+    int g[10];
+    
+    cin >> n;
+    
+    while (c <= n) {
+        for (int i = 0; i < 10; i++){
+            cin >> g[i];
+        }
+        
+        int min = g[0];
+        
+        for (int i = 0; i < 10; i++) {
+            if (g[i] < min) {
+                min = g[i];
+            }
+        }
+        
+        int max = g[0];
+        
+        for (int i = 0; i < 10; i++) {
+            if (g[i] > max) {
+                max = g[i];            }
+        }
+        
+        int result = 0;
+        
+        for (int i = 0; i < 10; i++) {
+            result += g[i];
+        }
+        
+        cout << c << " " << result - min - max << endl;
+        
+        c++;
+    }
+    
     return 0;
 }
